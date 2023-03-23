@@ -61,7 +61,7 @@
   <table class="table" id="tabela_bancos">
     <thead>
       <tr>
-        <th colspan="9">Recursos disponíevis no módulo Boletos</th>
+        <th colspan="9">Recursos disponíveis no módulo Boletos</th>
       </tr>
       <tr>
         <th class="nome_banco" colspan="2">Banco</ht>
@@ -102,50 +102,7 @@
     var Bancos_vue = new Vue({
       el: '#tabela_bancos',
       data: {
-        lista_bancos: [{
-            'descricao': 'Banco do Brasil',
-            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/001.png?raw=true',
-            'emissao': true,
-            'desconto': true,
-            'retorno_auto': true,
-            'retorno_cnab240': false,
-            'retorno_cnab400': false,
-            'alterar_vencimento': true,
-            'baixar': true,
-          },
-          {
-            'descricao': 'Sicredi',
-            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/748.png?raw=true',
-            'emissao': true,
-            'desconto': true,
-            'retorno_auto': true,
-            'retorno_cnab240': false,
-            'retorno_cnab400': false,
-            'alterar_vencimento': true,
-            'baixar': true,
-          },
-          {
-            'descricao': 'Sicoob',
-            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/756.png?raw=true',
-            'emissao': true,
-            'desconto': true,
-            'retorno_auto': true,
-            'retorno_cnab240': false,
-            'retorno_cnab400': false,
-            'alterar_vencimento': true,
-            'baixar': true,
-          },
-          {
-            'descricao': 'CRESOL',
-            'link_img': 'https://cresol.com.br/wp-content/uploads/elementor/thumbs/cropped-cresol-logo-1-phwoafl622ser0p9xpalw61i4vo6n8c0tqjqsipycw.png',
-            'emissao': true,
-            'desconto': true,
-            'retorno_auto': true,
-            'retorno_cnab240': false,
-            'retorno_cnab400': false,
-            'alterar_vencimento': true,
-            'baixar': true,
-          },
+        lista_bancos: [
           {
             'descricao': 'Ailos',
             'link_img': 'https://www.ailos.coop.br/wp-content/uploads/2022/03/logotipo-ailos-degrade.jpg',
@@ -157,6 +114,17 @@
             'alterar_vencimento': true,
             'baixar': true,
           },
+          {
+            'descricao': 'Banco do Brasil',
+            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/001.png?raw=true',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },          
           {
             'descricao': 'Banco Inter',
             'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/077.png?raw=true',
@@ -180,6 +148,17 @@
             'baixar': false,
           },
           {
+            'descricao': 'CRESOL',
+            'link_img': 'https://cresol.com.br/wp-content/uploads/elementor/thumbs/cropped-cresol-logo-1-phwoafl622ser0p9xpalw61i4vo6n8c0tqjqsipycw.png',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },   
+          {
             'descricao': 'Santander',
             'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/033.png?raw=true',
             'emissao': true,
@@ -190,6 +169,28 @@
             'alterar_vencimento': false,
             'baixar': false,
           },
+          {
+            'descricao': 'Sicoob',
+            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/756.png?raw=true',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },   
+          {
+            'descricao': 'Sicredi',
+            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/748.png?raw=true',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },         
         ],
       }
 
