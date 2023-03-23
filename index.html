@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
   </style>
 
   <style>
@@ -40,7 +40,8 @@
       border: 1px solid black;
     }
 
-    td, th {
+    td,
+    th {
       text-align: center;
     }
 
@@ -51,7 +52,6 @@
     * {
       font-family: 'Inter', sans-serif;
     }
-
   </style>
 
 </head>
@@ -61,21 +61,22 @@
   <table class="table" id="tabela_bancos">
     <thead>
       <tr>
-        <th colspan="8">Recursos disponíevis no módulo Boletos</th>
+        <th colspan="9">Recursos disponíevis no módulo Boletos</th>
       </tr>
       <tr>
-        <th class="nome_banco">Banco</ht>
-        <th>Emissão via API</ht>
-        <th>Desconto</ht>
-        <th>Retorno automático</ht>
-        <th>Retorno CNAB 240</ht>
-        <th>Retorno CNAB 400</ht>
-        <th>Alterar vencimento</ht>
-        <th>Baixar</ht>
+        <th class="nome_banco" colspan="2">Banco</ht>
+        <td>Emissão via API</td>
+        <td>Desconto</td>
+        <td>Retorno automático</td>
+        <td>Retorno CNAB 240</td>
+        <td>Retorno CNAB 400</td>
+        <td>Alterar vencimento</td>
+        <td>Baixar</td>
       </tr>
       <thead>
       <tbody>
         <tr v-for="banco in lista_bancos">
+          <td><img v-bind:src="banco.link_img" width="50px;"></td>
           <td class="nome_banco">{{banco.descricao}}</td>
           <td><i v-if="banco.emissao" class="fas fa-check"></i></td>
           <td><i v-if="banco.desconto" class="fas fa-check"></i></td>
@@ -103,6 +104,7 @@
       data: {
         lista_bancos: [{
             'descricao': 'Banco do Brasil',
+            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/001.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -113,6 +115,7 @@
           },
           {
             'descricao': 'Sicredi',
+            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/748.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -123,6 +126,7 @@
           },
           {
             'descricao': 'Sicoob',
+            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/756.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -133,6 +137,7 @@
           },
           {
             'descricao': 'CRESOL',
+            'link_img': 'https://cresol.com.br/wp-content/uploads/elementor/thumbs/cropped-cresol-logo-1-phwoafl622ser0p9xpalw61i4vo6n8c0tqjqsipycw.png',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -143,16 +148,7 @@
           },
           {
             'descricao': 'Ailos',
-            'emissao': true,
-            'desconto': true,
-            'retorno_auto': true,
-            'retorno_cnab240': false,
-            'retorno_cnab400': false,
-            'alterar_vencimento': true,
-            'baixar': true,
-          },
-          {
-            'descricao': 'Ailos',
+            'link_img': 'https://www.ailos.coop.br/wp-content/uploads/2022/03/logotipo-ailos-degrade.jpg',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -163,6 +159,7 @@
           },
           {
             'descricao': 'Banco Inter',
+            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/077.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -173,6 +170,7 @@
           },
           {
             'descricao': 'Bradesco',
+            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/237.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -183,6 +181,7 @@
           },
           {
             'descricao': 'Santander',
+            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/033.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -193,6 +192,7 @@
           },
           {
             'descricao': 'Itaú',
+            'link_img': 'https://github.com/eduardokum/laravel-boleto/blob/master/logos/341.png?raw=true',
             'emissao': false,
             'desconto': true,
             'retorno_auto': true,
