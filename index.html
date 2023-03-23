@@ -77,7 +77,8 @@
       <tbody>
         <tr v-for="banco in lista_bancos">
           <td><img v-bind:src="banco.link_img" width="50px;"></td>
-          <td class="nome_banco">{{banco.descricao}}</td>
+          <!-- <td class="nome_banco">{{banco.descricao}}</td> -->
+          <td class="nome_banco">{{banco.versao}}</td>
           <td><i v-if="banco.emissao" class="fas fa-check"></i></td>
           <td><i v-if="banco.desconto" class="fas fa-check"></i></td>
           <td><i v-if="banco.retorno_auto" class="fas fa-check"></i></td>
@@ -113,6 +114,7 @@
             'retorno_cnab400': false,
             'alterar_vencimento': true,
             'baixar': true,
+            'versao': 'v1',
           },
           {
             'descricao': 'Banco do Brasil',
@@ -124,6 +126,7 @@
             'retorno_cnab400': false,
             'alterar_vencimento': true,
             'baixar': true,
+            'versao': 'v2',
           },          
           {
             'descricao': 'Banco Inter',
@@ -135,6 +138,7 @@
             'retorno_cnab400': false,
             'alterar_vencimento': true,
             'baixar': true,
+            'versao': 'v1',
           },
           {
             'descricao': 'Bradesco',
@@ -146,6 +150,7 @@
             'retorno_cnab400': true,
             'alterar_vencimento': false,
             'baixar': false,
+            'versao': 'v1',
           },
           {
             'descricao': 'CRESOL',
@@ -157,6 +162,7 @@
             'retorno_cnab400': false,
             'alterar_vencimento': true,
             'baixar': true,
+            'versao': 'v1',
           },   
           {
             'descricao': 'Santander',
@@ -168,6 +174,7 @@
             'retorno_cnab400': true,
             'alterar_vencimento': false,
             'baixar': false,
+            'versao': 'v1',
           },
           {
             'descricao': 'Sicoob',
@@ -179,6 +186,7 @@
             'retorno_cnab400': false,
             'alterar_vencimento': true,
             'baixar': true,
+            'versao': 'v2',
           },   
           {
             'descricao': 'Sicredi',
@@ -190,6 +198,7 @@
             'retorno_cnab400': false,
             'alterar_vencimento': true,
             'baixar': true,
+            'versao': 'v1',
           },         
         ],
       }
