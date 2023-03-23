@@ -1,156 +1,216 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
 
-<style>
-  #tabela_bancos tr td i {
-    color: #405e7b
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/images/favicon.ico" type="image/ico" />
+  <title>
+    Recursos disponíveis no módulo boletos
+  </title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap&v=1679503302059"
+    rel="stylesheet">
+
+  <style>
+
+  #tabela_bancos{
+    width: 98%;
   }
 
-  .table {
-    padding: 10px;
-  }
-</style>
-
-<table class="table" id="tabela_bancos">
-  <thead>
-    <tr>
-      <th><center>Banco</center></ht>
-      <th><center>Emissão via API</center></ht>
-      <th><center>Desconto</center></ht>
-      <th><center>Retorno automático</center></ht>
-      <th><center>Retorno CNAB 240</center></ht>
-      <th><center>Retorno CNAB 400</center></ht>
-      <th><center>Alterar vencimento</center></ht>
-      <th><center>Baixar</center></ht>
-    </tr>
-    <thead>
-    <tbody>
-      <tr v-for="banco in lista_bancos">
-        <td>{{banco.descricao}}</td>
-        <td><center><i v-if="banco.emissao" class="fas fa-check"></i></center></td>
-        <td><center><i v-if="banco.desconto" class="fas fa-check"></i></center></td>
-        <td><center><i v-if="banco.retorno_auto" class="fas fa-check"></i></center></td>
-        <td><center><i v-if="banco.retorno_cnab240" class="fas fa-check"></i></center></td>
-        <td><center><i v-if="banco.retorno_cnab400" class="fas fa-check"></i></center></td>
-        <td><center><i v-if="banco.alterar_vencimento" class="fas fa-check"></i></center></td>
-        <td><center><i v-if="banco.baixar" class="fas fa-check"></i></center></td>
-      </tr>
-    </tbody>
-</table>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-  integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-
-<script>
-  var Bancos_vue = new Vue({
-    el: '#tabela_bancos',
-    data: {
-      lista_bancos: [{
-          'descricao': 'Banco do Brasil',
-          'emissao': true,
-          'desconto': true,
-          'retorno_auto': true,
-          'retorno_cnab240': false,
-          'retorno_cnab400': false,
-          'alterar_vencimento': true,
-          'baixar': true,
-        },
-        {
-          'descricao': 'Sicredi',
-          'emissao': true,
-          'desconto': true,
-          'retorno_auto': true,
-          'retorno_cnab240': false,
-          'retorno_cnab400': false,
-          'alterar_vencimento': true,
-          'baixar': true,
-        },
-        {
-          'descricao': 'Sicoob',
-          'emissao': true,
-          'desconto': true,
-          'retorno_auto': true,
-          'retorno_cnab240': false,
-          'retorno_cnab400': false,
-          'alterar_vencimento': true,
-          'baixar': true,
-        },
-        {
-          'descricao': 'CRESOL',
-          'emissao': true,
-          'desconto': true,
-          'retorno_auto': true,
-          'retorno_cnab240': false,
-          'retorno_cnab400': false,
-          'alterar_vencimento': true,
-          'baixar': true,
-        },
-        {
-          'descricao': 'Ailos',
-          'emissao': true,
-          'desconto': true,
-          'retorno_auto': true,
-          'retorno_cnab240': false,
-          'retorno_cnab400': false,
-          'alterar_vencimento': true,
-          'baixar': true,
-        },
-        {
-          'descricao': 'Ailos',
-          'emissao': true,
-          'desconto': true,
-          'retorno_auto': true,
-          'retorno_cnab240': false,
-          'retorno_cnab400': false,
-          'alterar_vencimento': true,
-          'baixar': true,
-        },
-        {
-          'descricao': 'Banco Inter',
-          'emissao': true,
-          'desconto': true,
-          'retorno_auto': true,
-          'retorno_cnab240': false,
-          'retorno_cnab400': false,
-          'alterar_vencimento': true,
-          'baixar': true,
-        },
-        {
-          'descricao': 'Bradesco',
-          'emissao': true,
-          'desconto': true,
-          'retorno_auto': true,
-          'retorno_cnab240': true,
-          'retorno_cnab400': true,
-          'alterar_vencimento': true,
-          'baixar': true,
-        },
-        {
-          'descricao': 'Santander',
-          'emissao': true,
-          'desconto': true,
-          'retorno_auto': true,
-          'retorno_cnab240': true,
-          'retorno_cnab400': true,
-          'alterar_vencimento': true,
-          'baixar': true,
-        },
-        {
-          'descricao': 'Itaú',
-          'emissao': false,
-          'desconto': true,
-          'retorno_auto': true,
-          'retorno_cnab240': true,
-          'retorno_cnab400': true,
-          'alterar_vencimento': true,
-          'baixar': true,
-        }
-      ],
+    #tabela_bancos tr td i {
+      color: #405e7b
     }
 
-  });
-</script>
+    table {
+      margin-left: 1%;
+      margin-top: 1%;
+      border: 1px solid black;
+    }
+  </style>
+
+  </head>
+  <body>
+
+  <table class="table" id="tabela_bancos">
+    <thead>
+      <tr>
+        <th>
+          <center>Banco</center>
+          </ht>
+        <th>
+          <center>Emissão via API</center>
+          </ht>
+        <th>
+          <center>Desconto</center>
+          </ht>
+        <th>
+          <center>Retorno automático</center>
+          </ht>
+        <th>
+          <center>Retorno CNAB 240</center>
+          </ht>
+        <th>
+          <center>Retorno CNAB 400</center>
+          </ht>
+        <th>
+          <center>Alterar vencimento</center>
+          </ht>
+        <th>
+          <center>Baixar</center>
+          </ht>
+      </tr>
+      <thead>
+      <tbody>
+        <tr v-for="banco in lista_bancos">
+          <td>{{banco.descricao}}</td>
+          <td>
+            <center><i v-if="banco.emissao" class="fas fa-check"></i></center>
+          </td>
+          <td>
+            <center><i v-if="banco.desconto" class="fas fa-check"></i></center>
+          </td>
+          <td>
+            <center><i v-if="banco.retorno_auto" class="fas fa-check"></i></center>
+          </td>
+          <td>
+            <center><i v-if="banco.retorno_cnab240" class="fas fa-check"></i></center>
+          </td>
+          <td>
+            <center><i v-if="banco.retorno_cnab400" class="fas fa-check"></i></center>
+          </td>
+          <td>
+            <center><i v-if="banco.alterar_vencimento" class="fas fa-check"></i></center>
+          </td>
+          <td>
+            <center><i v-if="banco.baixar" class="fas fa-check"></i></center>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+  <script>
+    var Bancos_vue = new Vue({
+      el: '#tabela_bancos',
+      data: {
+        lista_bancos: [{
+            'descricao': 'Banco do Brasil',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },
+          {
+            'descricao': 'Sicredi',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },
+          {
+            'descricao': 'Sicoob',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },
+          {
+            'descricao': 'CRESOL',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },
+          {
+            'descricao': 'Ailos',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },
+          {
+            'descricao': 'Ailos',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },
+          {
+            'descricao': 'Banco Inter',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },
+          {
+            'descricao': 'Bradesco',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': true,
+            'retorno_cnab400': true,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },
+          {
+            'descricao': 'Santander',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': true,
+            'retorno_cnab400': true,
+            'alterar_vencimento': true,
+            'baixar': true,
+          },
+          {
+            'descricao': 'Itaú',
+            'emissao': false,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': true,
+            'retorno_cnab400': true,
+            'alterar_vencimento': true,
+            'baixar': true,
+          }
+        ],
+      }
+
+    });
+  </script>
+
+</body>
