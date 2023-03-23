@@ -1,30 +1,39 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<style>
+  #tabela_bancos tr td i {
+    color: #405e7b
+  }
 
-<table class="table table-bordered table-striped" id="tabela_bancos">
+  .table {
+    padding: 10px;
+  }
+</style>
+
+<table class="table" id="tabela_bancos">
   <thead>
     <tr>
-      <th>Banco<ht>
-      <th>Emissão via API<ht>
-      <th>Desconto<ht>
-      <th>Retorno automático<ht>
-      <th>Retorno CNAB 240<ht>
-      <th>Retorno CNAB 400<ht>
-      <th>Alterar vencimento<ht>
-      <th>Baixar<ht>
+      <th><center>Banco</center></ht>
+      <th><center>Emissão via API</center></ht>
+      <th><center>Desconto</center></ht>
+      <th><center>Retorno automático</center></ht>
+      <th><center>Retorno CNAB 240</center></ht>
+      <th><center>Retorno CNAB 400</center></ht>
+      <th><center>Alterar vencimento</center></ht>
+      <th><center>Baixar</center></ht>
     </tr>
     <thead>
     <tbody>
       <tr v-for="banco in lista_bancos">
         <td>{{banco.descricao}}</td>
-        <td><i v-if="banco.emissao" class="fas fa-check-circle"></i></td>
-        <td><i v-if="banco.desconto" class="fas fa-check-circle"></i></td>
-        <td><i v-if="banco.retorno_auto" class="fas fa-check-circle"></i></td>
-        <td><i v-if="banco.retorno_cnab240" class="fas fa-check-circle"></i></td>
-        <td><i v-if="banco.retorno_cnab400" class="fas fa-check-circle"></i></td>
-        <td><i v-if="banco.alterar_vencimento" class="fas fa-check-circle"></i></td>
-        <td><i v-if="banco.baixar" class="fas fa-check-circle"></i></td>
+        <td><center><i v-if="banco.emissao" class="fas fa-check"></i></center></td>
+        <td><center><i v-if="banco.desconto" class="fas fa-check"></i></center></td>
+        <td><center><i v-if="banco.retorno_auto" class="fas fa-check"></i></center></td>
+        <td><center><i v-if="banco.retorno_cnab240" class="fas fa-check"></i></center></td>
+        <td><center><i v-if="banco.retorno_cnab400" class="fas fa-check"></i></center></td>
+        <td><center><i v-if="banco.alterar_vencimento" class="fas fa-check"></i></center></td>
+        <td><center><i v-if="banco.baixar" class="fas fa-check"></i></center></td>
       </tr>
     </tbody>
 </table>
