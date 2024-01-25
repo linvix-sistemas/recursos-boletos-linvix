@@ -68,7 +68,6 @@
         <td>Emissão via API</td>
         <td>Desconto</td>
         <td>Retorno automático</td>
-        <!-- <td>Retorno CNAB 240</td> -->
         <td>Retorno CNAB 400</td>
         <td>Alterar vencimento</td>
         <td>Baixar</td>
@@ -77,12 +76,10 @@
       <tbody>
         <tr v-for="banco in lista_bancos">
           <td><img v-bind:src="banco.link_img" width="80px;"></td>
-          <!-- <td class="nome_banco">{{banco.descricao}}</td> -->
           <td class="nome_banco">{{banco.versao}}</td>
           <td><i v-if="banco.emissao" class="fas fa-check"></i></td>
           <td><i v-if="banco.desconto" class="fas fa-check"></i></td>
           <td><i v-if="banco.retorno_auto" class="fas fa-check"></i></td>
-          <!-- <td><i v-if="banco.retorno_cnab240" class="fas fa-check"></i></td> -->
           <td><i v-if="banco.retorno_cnab400" class="fas fa-check"></i></td>
           <td><i v-if="banco.alterar_vencimento" class="fas fa-check"></i></td>
           <td><i v-if="banco.baixar" class="fas fa-check"></i></td>
@@ -90,23 +87,19 @@
       </tbody>
   </table>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
-  </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
 
   <script>
+
     var Bancos_vue = new Vue({
       el: '#tabela_bancos',
       data: {
         lista_bancos: [
           {
             'descricao': 'Ailos',
-            'link_img': '/recursos-boletos-linvix/ailos.jpg?raw=true',
+            'link_img': 'images/085.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -118,7 +111,7 @@
           },
           {
             'descricao': 'Banco do Brasil',
-            'link_img': '/recursos-boletos-linvix/001.png?raw=true',
+            'link_img': 'images/001.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -127,22 +120,10 @@
             'alterar_vencimento': true,
             'baixar': true,
             'versao': 'v2',
-          },          
-          {
-            'descricao': 'Banco Inter',
-            'link_img': '/recursos-boletos-linvix/077.png?raw=true',
-            'emissao': true,
-            'desconto': true,
-            'retorno_auto': true,
-            'retorno_cnab240': false,
-            'retorno_cnab400': false,
-            'alterar_vencimento': true,
-            'baixar': true,
-            'versao': 'v1',
           },
           {
             'descricao': 'Bradesco',
-            'link_img': '/recursos-boletos-linvix/237.png?raw=true',
+            'link_img': 'images/237.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': false,
@@ -153,8 +134,8 @@
             'versao': 'v1',
           },
           {
-            'descricao': 'CRESOL',
-            'link_img': '/recursos-boletos-linvix/cresol.png?raw=true',
+            'descricao': 'Cresol',
+            'link_img': 'images/133.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -163,10 +144,34 @@
             'alterar_vencimento': true,
             'baixar': true,
             'versao': 'v1',
-          },   
+          },
+          {
+            'descricao': 'Inter',
+            'link_img': 'images/077.png?raw=true',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+            'versao': 'v1',
+          }, 
+          // {
+          //   'descricao': 'Itaú',
+          //   'link_img': 'images/341.png?raw=true',
+          //   'emissao': true,
+          //   'desconto': false,
+          //   'retorno_auto': false,
+          //   'retorno_cnab240': false,
+          //   'retorno_cnab400': true,
+          //   'alterar_vencimento': false,
+          //   'baixar': false,
+          //   'versao': 'v1',
+          // },  
           {
             'descricao': 'Santander',
-            'link_img': '/recursos-boletos-linvix/033.png?raw=true',
+            'link_img': 'images/033.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': false,
@@ -178,7 +183,7 @@
           },
           {
             'descricao': 'Sicoob',
-            'link_img': '/recursos-boletos-linvix/756.png?raw=true',
+            'link_img': 'images/756.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -190,7 +195,7 @@
           },   
           {
             'descricao': 'Sicredi',
-            'link_img': '/recursos-boletos-linvix/748.png?raw=true',
+            'link_img': 'images/748.png?raw=true',
             'emissao': true,
             'desconto': true,
             'retorno_auto': true,
@@ -204,11 +209,6 @@
       }
 
     });
-  </script>
-
-  <script>
-
-
 
   </script>
 
