@@ -67,10 +67,10 @@
         <th class="nome_banco" colspan="2">Banco</ht>
         <td>Emissão via API</td>
         <td>Desconto</td>
-        <td>Retorno automático</td>
-        <td>Retorno CNAB 400</td>
         <td>Alterar vencimento</td>
         <td>Baixar</td>
+        <td>Retorno automático</td>
+        <td>Retorno CNAB 400</td>
       </tr>
       <thead>
       <tbody>
@@ -79,10 +79,10 @@
           <td class="nome_banco">{{banco.versao}}</td>
           <td><i v-if="banco.emissao" class="fas fa-check"></i></td>
           <td><i v-if="banco.desconto" class="fas fa-check"></i></td>
-          <td><i v-if="banco.retorno_auto" class="fas fa-check"></i></td>
-          <td><i v-if="banco.retorno_cnab400" class="fas fa-check"></i></td>
           <td><i v-if="banco.alterar_vencimento" class="fas fa-check"></i></td>
           <td><i v-if="banco.baixar" class="fas fa-check"></i></td>
+          <td><i v-if="banco.retorno_auto" class="fas fa-check"></i></td>
+          <td><i v-if="banco.retorno_cnab400" class="fas fa-check"></i></td>
         </tr>
       </tbody>
   </table>
@@ -157,18 +157,18 @@
             'baixar': true,
             'versao': 'v1',
           }, 
-          // {
-          //   'descricao': 'Itaú',
-          //   'link_img': 'images/341.png?raw=true',
-          //   'emissao': true,
-          //   'desconto': false,
-          //   'retorno_auto': false,
-          //   'retorno_cnab240': false,
-          //   'retorno_cnab400': true,
-          //   'alterar_vencimento': false,
-          //   'baixar': false,
-          //   'versao': 'v1',
-          // },  
+          {
+            'descricao': 'Itaú',
+            'link_img': 'images/341.png?raw=true',
+            'emissao': true,
+            'desconto': true,
+            'retorno_auto': true,
+            'retorno_cnab240': false,
+            'retorno_cnab400': false,
+            'alterar_vencimento': true,
+            'baixar': true,
+            'versao': 'v2',
+          },  
           {
             'descricao': 'Santander',
             'link_img': 'images/033.png?raw=true',
